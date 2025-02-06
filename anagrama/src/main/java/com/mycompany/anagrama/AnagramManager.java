@@ -21,12 +21,7 @@ public class AnagramManager {
     }
 
     public Boolean isAnagrama() {
-
-        if (word1.length() != word2.length()) {// si no son iguales los tamanios entonces no son anagramas
-            return false;
-        }
-
-        // Convertir a array de caracteres 
+        // convertir a array de caracteres 
         char[] charArray1 = word1.toCharArray();
         char[] charArray2 = word2.toCharArray();
 
@@ -34,9 +29,8 @@ public class AnagramManager {
         Arrays.sort(charArray1);
         Arrays.sort(charArray2);
 
-        // Comparamos los arrays y retornamos si son iguales
+        // comparamos los arrays y retornamos si son iguales
         return Arrays.equals(charArray1, charArray2);
-
     }
 
 }

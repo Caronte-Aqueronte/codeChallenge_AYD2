@@ -10,8 +10,9 @@ package com.mycompany.anagrama;
 public class Anagram {
 
     public static void main(String[] args) {
-        AnagramManager anagramaManager = new AnagramManager("espada", "pesada");
-        System.out.println(anagramaManager.isAnagrama());
+        //usar el manager de anagrama para analizar las palabras
+        AnagramManager anagramManager = new AnagramManager("espadaa", "pesada");
+        System.out.println(anagramManager.isAnagrama());//imprimir la respuesta del metodo
     }
 
 }
