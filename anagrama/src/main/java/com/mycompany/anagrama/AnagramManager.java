@@ -1,5 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.anagrama;
 
@@ -9,14 +10,17 @@ import java.util.Arrays;
  *
  * @author Luis Monterroso
  */
-public class Anagrama {
+public class AnagramManager {
 
-    public static void main(String[] args) {
-        Anagrama anagrama = new Anagrama();
-        System.out.println(anagrama.isAnagrama("coco", "ococ"));
+    private final String word1;
+    private final String word2;
+
+    public AnagramManager(String word1, String word2) {
+        this.word1 = word1;
+        this.word2 = word2;
     }
 
-    public Boolean isAnagrama(String word1, String word2) {
+    public Boolean isAnagrama() {
 
         if (word1.length() != word2.length()) {// si no son iguales los tamanios entonces no son anagramas
             return false;
@@ -34,4 +38,5 @@ public class Anagrama {
         return Arrays.equals(charArray1, charArray2);
 
     }
+
 }
