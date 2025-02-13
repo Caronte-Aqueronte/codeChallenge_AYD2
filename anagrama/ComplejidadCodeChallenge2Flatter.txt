@@ -1,0 +1,32 @@
+1. 
+private int countElements
+
+La función recorre todos los elementos del array de entrada.
+Si un elemento es un sub-array, se llama recursivamente.
+En el peor caso, si cada elemento es un array anidado, la función recorrerá todos los elementos una vez.
+Esto significa que cada elemento se cuenta exactamente una vez.
+
+Conclusión:
+La función countElements tiene una complejidad O(n)
+
+2. 
+private int fillFlatArray
+
+Recorre todos los elementos del array.
+Si un elemento es un sub-array, se llama recursivamente.
+Cada elemento del array se copia exactamente una vez en flatArray.
+
+Conclusión:
+La función fillFlatArray tiene una complejidad O(n), cada elemento se procesa una vez.
+
+3.
+public Object[] flatten() 
+
+Crea un array
+
+Conclusión:
+La funcion es O(1)
+
+
+R// El algoritmo tiene la siguiente complejidad
+O(n)+O(n)+O(1)=O(n)
