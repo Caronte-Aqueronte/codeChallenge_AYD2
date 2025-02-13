@@ -23,6 +23,16 @@ public class ArrayFlattener {
         return flatArray;
     }
 
+    /**
+     * Cuenta el número total de elementos en un arreglo, incluyendo aquellos
+     * dentro de subarreglos anidados. Utiliza recursión para recorrer todos los
+     * niveles de anidamiento.
+     *
+     * @param array El arreglo de entrada, que puede contener elementos u otros
+     * arreglos.
+     * @return El número total de elementos en el arreglo, contando también los
+     * de cualquier subarreglo.
+     */
     private int countElements(Object[] array) {
         int count = 0;// variable que contara cuantos elementos tiene el array en total
         for (Object item : array) {//recorrer todo el array
@@ -35,6 +45,20 @@ public class ArrayFlattener {
         return count;//devovlemos el total de la cuenta
     }
 
+    /**
+     * Llena un arreglo plano (unidimensional) con los elementos de un arreglo
+     * potencialmente anidado (multidimensional). Utiliza recursión para
+     * recorrer todos los niveles de anidamiento.
+     *
+     * @param array El arreglo de entrada que puede contener elementos u otros
+     * arreglos.
+     * @param flatArray El arreglo plano donde se almacenarán los elementos
+     * extraídos.
+     * @param position La posición actual en el arreglo plano donde se insertará
+     * el siguiente elemento.
+     * @return La nueva posición actualizada después de agregar los elementos
+     * del {@code array} en {@code flatArray}.
+     */
     private int fillFlatArray(Object[] array, Object[] flatArray, int position) {
         for (Object item : array) {
             if (item instanceof Object[]) {
