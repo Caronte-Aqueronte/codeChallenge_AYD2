@@ -1,0 +1,51 @@
+1. 
+ public String printStrudents() {
+        StringBuilder salida = new StringBuilder();
+
+        //iterar sobre el map o(n)
+        students.forEach((student, mark) -> {
+            salida.append(String.format("Nombre Estudiante: %s, Apellido del estudiante: %s, Nota: %s\n",
+                    student.getName(), student.getLastName(), mark.toString()));
+        });
+
+        String response = salida.toString();
+        System.out.println(response);
+        return response;
+    }
+
+
+La complejidad de este algoritmo es O(n) ya que solo recorre cada uno de los elementos del set
+
+2.
+
+
+public void addOrReplaceStudent(Student newStudent, Integer mark) {
+        Student toRemove = null;
+
+        //buscar si el apellido ya existe en el mapa
+        for (Student student : students.keySet()) {
+            //si se cumple entonces guardamos la referencia
+            if (student.getLastName().equals(newStudent.getLastName())) {
+                toRemove = student;
+                break;//romper el ciclo
+            }
+        }
+
+        //si la bandera se activo entonces borramos
+        if (toRemove != null) {
+            students.remove(toRemove);
+        }
+
+        //finalmente agregar
+        students.put(newStudent, mark);
+    }
+
+La complejidad para rwcorrer el map es O(n)
+La complejidad para acceder a un elemento  es O(1)
+O(n) + O(1) = O(n)
+
+
+
+
+Por lo tanto O(n) + O (n) = O(n)
+
